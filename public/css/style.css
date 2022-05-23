@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background-image: "../images/otros/backgroundMain.jpg";
+    background-repeat: repeat;
+}
+
+/* fonts */
+
+.wins,
+.loses,
+.total {
+    font-size: 1.2em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* imgs */
+
+.winOrLose {
+    width: 70%;
+}
+
+@media only screen and (max-width: 991px) {
+    .winOrLose {
+        vertical-align: middle;
+        width: 100%;
+    }
+}
+
+/* info partida */
+.info-partida {
+    border: 6px solid transparent;
+    border-image: url("../images/otros/borders.png") 25% stretch;
+    background-color: #152731;
+}
+
+/* form */
+.busqueda-simple {
+    background-color: #152731;
+}
+
+.labels-inp label,
+.label-cant {
+    color: wheat;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.labels-inp input {
+    width: 60%;
+}
+
+/* results */
+
+.aliado {
+    background-color: #024a00;
+}
+
+.enemigo {
+    background-color: #590a10;
+}
+
+/* separador */
+.separador {
+    border: 6px solid transparent;
+    border-image: url("../images/otros/borders.png") 25% stretch;
+    background-color: black;
+}
