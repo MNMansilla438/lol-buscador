@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap-grid.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Resultados</title>
+</head>
+
+<body class="">
+    <div class="container">
+        <!-- resultados -->
+        <div class="info-partida text-center">
+            <div class="container">
+                <label style="color: green;" class="wins" for="">Ganadas: <%= buscar[1][0] %> </label>
+                <label style="color: yellow;" for="">|</label>
+                <label style="color: red;" class="loses" for="">Perdidas: <%= buscar[1][2] %> </label>
+                <label style="color: yellow;" for="">|</label>
+                <label style="color: grey;" class="total" for="">Total: <%= buscar[1][1] %> </label>
+            </div>
+        </div>
+
+        <% for (const resultados of buscar[0]) { %>
+            <!-- matchs -->
+            <div class="text-center row mt-5">
+                <!-- summoner 1-->
+                <div class="info-partida col-sm mt-1">
+                    <div class="aliado">
+                        <h6 class="text-white">
+                            <%= resultados[0]['Nombre invocador'] %>
+                        </h6>
+                    </div>
+
+
+                    <div class="">
+                        <img src=<%=`./images/otros/campeones/square_champs/${resultados[0]['Campeon']}Square.png` %>
+                        alt="">
+                    </div>
+
+                    <div class="text-white mt-3">
+                        <label for="">Campeon: <%= resultados[0]['Campeon'] %> </label>
+                        <br>
+                        <label for="">Asesinatos: <%= resultados[0]['Asesinatos'] %> </label>
+                        <br>
+                        <label for="">Muertes: <%= resultados[0]['Muertes'] %> </label>
+                        <br>
+                        <label for="">Asistencias: <%= resultados[0]['Asistencias'] %> </label>
+                    </div>
+                </div>
+                <!-- victoria o derrota brodel?-->
+                <div class="col-sm">
+                <% if (resultados[0]['Gano?']) { %>
+                    <img class="winOrLose w-100" src="./images/otros/Victoria" alt="" srcset="">
+                <% } else { %>
+                    <img class="winOrLose w-65" src="./images/otros/Derrota" alt="" srcset="">
+                <% } %>
+                </div>
+                <!-- invocador 2 z-->
+                <div class="info-partida col-sm mt-1">
+                    <% if (resultados[0]['Aliado']==resultados[1]['Aliado']) { %>
+                        <div class="aliado">
+                            <h6 class="text-white">
+                                <%= resultados[1]['Nombre invocador'] %>
+                            </h6>
+                        </div>
+                        <% } else { %>
+                            <div class="enemigo">
+                                <h6 class="text-white">
+                                    <%= resultados[1]['Nombre invocador'] %>
+                                </h6>
+                            </div>
+                            <% } %>
+
+                                <div>
+                                    <img src=<%=`./images/otros/campeones/square_champs/${resultados[1]['Campeon']}Square.png`
+                                        %> alt="">
+                                </div>
+
+                                <div class="text-white mt-3">
+                                    <label for="">Campeon: <%= resultados[1]['Campeon'] %> </label>
+                                    <br>
+                                    <label for="">Asesinatos: <%= resultados[1]['Asesinatos'] %> </label>
+                                    <br>
+                                    <label for="">Muertes: <%= resultados[1]['Muertes'] %> </label>
+                                    <br>
+                                    <label for="">Asistencias: <%= resultados[1]['Asistencias'] %> </label>
+                                </div>
+                </div>
+            </div>
+
+            <!-- separador -->
+            <div class="separador text-center mt-5">
+                <div class="container">
+                    <label for=""></label>
+                </div>
+            </div>
+            <% } %>
+
+                <!-- lol icon img -->
+                <div class="text-center mt-3">
+                    <img src="./images/otros/logoLol.png" alt="">
+                </div>
+
+                <!-- volver atras pai -->
+                <div class="container col-sm text-center mt-2">
+                    <form>
+                        <input class="btn btn-primary" type="button" value="Volver" onclick="history.go(-1)">
+                    </form>
+                </div>
+
+    </div>
+</body>
+
+</html>

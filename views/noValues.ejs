@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap-grid.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Resultados</title>
+</head>
+
+<body class="">
+    <div class="row">
+        <!-- resultados -->
+        <% if (buscar) { %>
+            <div class="info-partida text-center col-sm mt-3">
+                <div class="container">
+                    <label style="color: red;" for=""> <h2>Error <%= `${buscar[0]}` %>, aprende a escrbir, abrazo</h2></label>
+                </div>
+            </div>
+        <% } else { %> 
+        <div class="info-partida text-center col-sm mt-3">
+            <div class="container">
+                <label style="color: red;" for=""> <h2>Error no ingresaste datos o de seguro te buscaste a vos mismo genioide! </h2></label>
+            </div>
+        </div>
+        <% } %>
+        <!-- lol icon img -->
+        <div class="text-center mt-5">
+            <img src="./images/otros/logoLol.png" alt="">
+        </div>
+
+        <!-- volver atras pai -->
+        <div class="container col-sm text-center mt-4">
+            <form>
+                <input class="btn btn-primary" type="button" value="Volver" onclick="history.go(-1)">
+            </form>        
+        </div>
+    </div>
+</body>
+
+</html>

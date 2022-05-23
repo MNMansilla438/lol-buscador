@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Busqueda</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text-center">
+            <h1 class="text-white">BUSCADOR DE AUTITOS</h1>
+        </div>
+        <!-- header -->
+        <div class="">
+            <p class="text-white">
+                Bienvenidos al <del>nimalaya</del> buscador de autitos, alguna vez te preguntaste si ya jugaste contra o
+                como aliado de un autito?, pues ya no mas mai friendo ya que esta pagina permite la busqueda para comparar
+                los resultados de ambos para ver si el autito jogo o no jogo nada mano, eu mi openeon mano voce e el trollo.
+            </p>
+        </div>
+        <!-- main single search -->
+        <div class="busqueda-simple form-control">
+            <form action="/buscar" method="post">
+                <!-- invocador 1 -->
+                <div class="labels-inp mt-2 mb-3">
+                    <label class="form-label" for="">Ingresa tu nombre en el juego: </label>
+                    <input class="form-input" type="text" name="invocador1">
+                </div>
+                <!-- invocador 2-->
+                <div class="labels-inp mb-3">
+                    <label class="form-label" for="">Ingresa el nombre del individuo: </label>
+                    <input class="form-input" type="text" name="invocador2">
+                </div>
+                <!-- apus -->
+                <div class="labels-inp mb-3">
+                    <label class="form-label" for="">Ingresa la API de League of Legends: </label>
+                    <input class="form-input" type="text" name="api">
+                </div>
+                <!-- cantidad de partidas -->
+                <div class="label-cant mb-3">
+                    <label class="form-label" for="">Cantidad:</label>
+                    <input class="form-input" type="number" name="cantidad" min="1" max="100" name="cantidad" id="">
+                </div>
+                <input class="mb-2" type="submit" name="myButton" id="" value="Buscar">
+            </form>
+        </div>
+
+        <!-- proximamente -->
+        <!-- main multiple search -->
+        <!-- 
+        <div class="form-control">
+            <form action="" method="post">
+                <label for="">Ingresa tu nombre en el juego: </label>
+                <input type="text">
+                <label for="">Copia y pega para busqueda multiple:</label>
+                <textarea name="" id="" cols="30" rows="5" style="resize: none;" ></textarea>
+                <input type="submit" value="Busqueda Multiple">
+            </form>
+        </div>
+        -->
+    </div>
+    <footer class="container mt-3">
+        <p class="text-white">
+            She importante amigo! haceme caso.
+            <br>
+            (*) El buscador puede tardar dependiendo de la cantidad de partidas ingresadas.
+            <br>
+            (**) El maximo de partidas que se pueden obtener es de 80, y si... que querias? buscar todo tu historial? 
+            <del> pelotudo pelotudio</del>. 
+        </p>
+    </footer>
+</body>
+
+</html>
